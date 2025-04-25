@@ -8,10 +8,21 @@ void colorinvert(Mat& image);
 
 void grayScaleInvert(Mat& image);
 
+void printMat(InputArray _mat) {
+	Mat mat = _mat.getMat();
+	cout << mat << endl;
+}
+
 int main()
 {
-	//cout << getBuildInformation() << endl;
 
+	uchar _data[] = { 1,2,3,4,5,6 };
+	Mat mat1(2, 3, CV_8U, _data);
+	printMat(mat1);
+
+	vector<float> vec1 = { 1.2f,3.4f,-2.1f };
+	printMat(vec1);
+	/*
 	VideoCapture video("car.avi");
 	
 	if (!video.isOpened()) {
@@ -33,7 +44,7 @@ int main()
 	video.release();
 	destroyAllWindows();
 	//여까지 하고 아래 주석
-	/*
+	
 	Mat src = imread("koksi9972.jpg", IMREAD_UNCHANGED);
 	Mat dst;
 	Mat onemore;
