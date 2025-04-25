@@ -456,3 +456,7 @@ FodyWeavers.xsd
 
 # End of httpswww.toptal.comdevelopersgitignoreapic++,visualstudio,opencv
 OpenCV_Exer/car.avi
+*.mp4
+*.jpg
+*.png
+*.dll
